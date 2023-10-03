@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  app:
+    image: ${NUSER}/notesapp # Use the image you pushed in the build step
+    container_name: dockcompose
+    ports:
+      - "8001:4050"

@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  build:
+    image: ${NUSER}/notesapp  # Use an image that has the necessary build tools
+    build:
+      context: .
+      dockerfile: Dockerfile  # Path to your Dockerfile
+    environment:
+      - DOCKER_HUB_USERNAME=${NUSER}
+      - DOCKER_HUB_PASSWORD=${NPASS}
